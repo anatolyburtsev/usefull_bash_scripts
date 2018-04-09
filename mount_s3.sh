@@ -14,6 +14,7 @@ cd s3fs-fuse
 make 1>/dev/null
 sudo make install 1>/dev/null
 cd ..
+sudo sed -i "s/# u/u/" /etc/fuse.conf
 
 # set password
 if [ ! -f ~/.passwd-s3fs ]; then
